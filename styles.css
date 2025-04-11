@@ -1,0 +1,420 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+    font-family: 'poppins';
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    color: white;
+    padding: 10px 20px;
+    width: 100%;
+    z-index: 2;
+}
+
+.logo img {
+    height: 50px;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.1); 
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin-right: 70px;
+    
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    transition: 0.3s;
+    
+}
+nav a{
+    padding:20px;
+    
+}
+nav a:hover{
+    transform: scale(1.1);
+    color: #5a5757; 
+}*
+
+#inicio {
+    text-align: center;
+    padding: 50px;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+}
+
+h1 {
+    font-size: 80px; 
+    font-weight: normal;
+    margin-bottom: 2px; 
+}
+
+.dscn {
+    font-size: 20px; 
+    color: #555; 
+    margin-top: 20px;
+    margin-top: 2px auto 0 auto;;
+}
+
+
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.info-item {
+    text-align: center;
+    max-width: 900px;
+    background: #ffffff00;
+    padding: 1rem;
+    
+}
+
+.info-item img {
+    width: 70%;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 1rem;
+}
+
+.info-item h2 {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.info-item p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+#habitaciones {
+    text-align: center;
+    padding: 20px;
+}
+
+.habitacion {
+    display: inline-block;
+    width: 500px;
+    margin: 20px;
+    background: rgb(255, 255, 255);
+    padding: 30px;
+    border-radius: 30px;
+    box-shadow: 1px 4px 8px rgba(0, 0, 0, 0);
+}
+
+.t_habitaciones {
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.img_h {
+    width: 100%;
+    border-radius: 10px;
+    height: 400px;
+    object-fit: cover;
+}
+
+.servicios img {
+    width: 30px; 
+    height: auto;
+    margin-right: 20px; 
+}
+
+button {
+    background-color: #dec8b2;
+    color: rgb(44, 42, 42);
+    border: none;
+    padding: 10px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #bdaa97;
+}
+
+#registro, #reserva {
+    background-color: #f0f0f0; 
+    padding: 20px;
+    border-radius: 10px; 
+    margin: 20px auto; 
+    max-width: 400px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+#registro h2, #reserva h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333; 
+}
+
+#registro label, #reserva label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555; 
+}
+
+#registro input[type="email"], #registro input[type="text"],
+#reserva input[type="text"], #reserva input[type="email"] {
+    width: calc(100% - 22px); 
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd; 
+    border-radius: 5px;
+    box-sizing: border-box; 
+}
+
+#registro input[type="checkbox"] {
+    margin-bottom: 15px;
+}
+
+#registro button[type="submit"], #reserva button[type="submit"], #contacto button[type="submit"] {
+    background-color: #dec8b2;
+    color: rgb(55, 53, 53);
+    padding: 10px 15px;
+    border: none;
+    border-radius: 40px;
+    cursor: pointer;
+    width: 50%;
+    display: block; /* Asegura que el botón ocupe el ancho especificado */
+    margin: 10px auto; /* Centra el botón horizontalmente */
+}
+
+#contenedor-formularios {
+    margin-top: 20px;
+}
+
+#registro, #reserva {
+    display: none; 
+}
+
+#contenedor-formularios {
+    position: fixed; /* Posición fija para que ocupe toda la pantalla */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro semitransparente */
+    display: none; /* Inicialmente oculto */
+    z-index: 1000; /* Asegura que esté encima de todo */
+    justify-content: center;
+    align-items: center;
+}
+
+#registro, #reserva {
+    background-color: #f0f0f0; 
+    padding: 20px;
+    border-radius: 10px; 
+    max-width: 400px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    display: none; /* Inicialmente ocultas */
+}
+
+#contacto {
+    background-color: #f0f0f0; 
+    padding: 20px;
+    border-radius: 10px; 
+    margin: 20px auto; 
+    max-width: 400px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+#contacto h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333; 
+}
+
+.contacto-info {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#contacto label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555; 
+}
+
+#contacto input[type="text"], #contacto input[type="email"], #contacto textarea {
+    width: calc(100% - 22px); 
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd; 
+    border-radius: 5px;
+    box-sizing: border-box; 
+}
+
+#contacto textarea {
+    resize: vertical; 
+    min-height: 100px; 
+}
+
+
+#footer-principal {
+    background-color: #000000;
+    width: 100%;
+    padding: 10px 0;
+    font-family: sans-serif;
+    color: #ffffff;
+}
+
+.footer-contenido {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-logo img {
+    max-height: 40px;
+    margin-bottom: 10px;
+}
+
+.footer-links {
+    display: flex; /* Mostrar enlaces en fila */
+    justify-content: center; /* Centrar horizontalmente */
+    margin: 10px 0; /* Margen superior e inferior */
+}
+
+.footer-navegacion ul, .footer-informacion ul {
+    list-style: none;
+    padding: 0;
+    display: flex; /* Mostrar listas en fila */
+}
+
+.footer-navegacion li, .footer-informacion li {
+    margin: 0 10px; /* Espacio entre los enlaces */
+    font-size: 0.8em;
+}
+
+.footer-navegacion a, .footer-informacion a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.footer-contacto {
+    text-align: center;
+    margin: 10px 0;
+    font-size: 0.8em;
+}
+
+.footer-derechos {
+    text-align: center;
+    font-size: 0.8em;
+    margin-top: 10px;
+}
+
+/* ======================================== */
+/* Estilos para el Formulario Realizar Reserva */
+/* ======================================== */
+
+#realizar-reserva {
+    background-color: #f0f0f0; /* Fondo gris claro */
+    padding: 30px;             /* Más espacio interior */
+    border-radius: 12px;         /* Bordes un poco más redondeados */
+    margin: 20px auto;         /* Margen superior/inferior y centrado horizontal */
+  
+    /* --- CONTROL DEL ANCHO --- */
+    /* Usa un porcentaje para que sea flexible pero limita el máximo */
+    width: 90%;
+    /* ¡¡AJUSTA ESTE VALOR AL ANCHO MÁXIMO QUE DESEES!! */
+    max-width: 650px;  /* Prueba con 650px, 700px, 800px, etc. */
+    /* --- --- */
+  
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15); /* Sombra un poco más pronunciada */
+    box-sizing: border-box;    /* Asegura que padding/border se incluyan en el width */
+    display: none;             /* Se controla con JS para mostrar/ocultar */
+  
+    /* Para asegurar que el contenido interno se organice bien en pantallas pequeñas o con mucho contenido */
+    overflow-y: auto; /* Añade scroll vertical si el contenido es muy alto */
+    max-height: 90vh; /* Evita que el modal sea más alto que el 90% de la pantalla */
+  }
+  
+  #realizar-reserva h2 {
+    text-align: center;
+    margin-top: 0; /* Quitar margen superior si el padding ya da espacio */
+    margin-bottom: 25px; /* Más espacio debajo del título */
+    color: #333;
+    font-weight: 600; /* Un poco más de peso al título */
+    font-size: 1.5em; /* Tamaño del título */
+  }
+  
+  #realizar-reserva label {
+    display: block; /* Ocupa su propia línea */
+    margin-bottom: 8px; /* Espacio sobre el input */
+    color: #555;
+    font-weight: 500; /* Un poco más de peso a las etiquetas */
+  }
+  
+  #realizar-reserva input[type="text"],
+  #realizar-reserva input[type="email"],
+  #realizar-reserva input[type="date"] {
+    width: 100%; /* Ocupa todo el ancho del contenedor */
+    padding: 12px; /* Un poco más de padding interno */
+    margin-bottom: 18px; /* Más espacio debajo de cada input */
+    border: 1px solid #ccc; /* Borde un poco más visible */
+    border-radius: 6px;  /* Bordes redondeados para inputs */
+    box-sizing: border-box; /* Incluye padding/border en el width */
+    font-size: 1em; /* Tamaño de fuente estándar */
+  }
+  
+  /* Estilo para el botón de envío */
+  #realizar-reserva button[type="submit"] {
+    background-color: #dec8b2; /* Color base del botón */
+    color: rgb(55, 53, 53); /* Color del texto del botón */
+    padding: 12px 20px; /* Padding vertical y horizontal */
+    border: none;
+    border-radius: 25px; /* Bordes redondeados */
+    cursor: pointer;
+    width: 100%;       /* Ocupa todo el ancho */
+    display: block;
+    margin-top: 10px;  /* Espacio sobre el botón */
+    margin-bottom: 0; /* Sin margen inferior extra */
+    font-size: 1.1em; /* Texto del botón un poco más grande */
+    font-weight: bold;
+    transition: background-color 0.2s ease; /* Transición suave al pasar el mouse */
+  }
+  
+  #realizar-reserva button[type="submit"]:hover {
+    background-color: #bdaa97; /* Color al pasar el mouse (el hover que tenías) */
+  }
+  
+  /* Nota: Asegúrate de no tener OTRA regla #realizar-reserva en otra parte del CSS */
+  /* que pueda estar interfiriendo o usando !important. */
+
+.instruccion-busqueda {
+    font-size: 0.9em;
+    color: #777;      
+    font-style: italic; 
+    text-align: center;
+    margin-top: -5px;
+    margin-bottom: 15px;
+    line-height: 1.4;
+  }
+
